@@ -7,6 +7,7 @@
 // the setup function runs once when you press reset or power the board
 #include <WiFiUdp.h>
 #include <ESP8266WiFi.h>
+#include "DMXSerial.h"
 
 #define LED_PIN				0
 #define SACN_PORT			5568
@@ -18,13 +19,17 @@ const char* ssid = "FlynnEffect";
 const char* password = "FlynnEffect";
 long lastUpdateTime = -1;
 
-WiFiUDP udp;
+WiFiUDP udp; 
+DMXSerialClass dmx;
 
 void setup() 
 {
 	WiFi.begin(ssid, password);
-	Serial.begin(115200);
-	Serial1.begin(DMX_SPEED); // serial1's pins are 14 (GPIO2) and 23 (SD_D1)
+	/*Serial.begin(115200);
+	Serial1.begin(DMX_SPEED); // serial1's pins are 14 (GPIO2) and 23 (SD_D1)*/
+	dmx = DMXSerialClass();
+	dmx.init(DMXController);
+
 	while (WiFi.status() != WL_CONNECTED)
 	{
 		delay(500);
@@ -44,12 +49,14 @@ void loop()
 		short size = (udp.read() << 8) + udp.read();
 		/*byte* values = new byte[size];
 		udp.read(values, size);*/
-		sendBreak();
+		//sendBreak();
 		for (int i = 0; i < size; i++)
 		{
-			Serial1.write(udp.read());
-		}	
+			dmx.write(i, udp.read());
+			//Serial1.write(udp.read());
+		}
 	}
+	//dmx.transmit();
 }
 
 void sendBreak()

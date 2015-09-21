@@ -37,6 +37,9 @@
     <Filter Include="_libraries\ESP8266WiFi\src\lwip">
       <UniqueIdentifier>{5843f608-aec1-4f1e-90a3-a0bf7e3e8a1d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="_libraries\DMXSerial">
+      <UniqueIdentifier>{99bac4bb-a70f-444d-b5bb-a42e2bc717f5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="sacndmx.ino" />
@@ -303,6 +306,9 @@
     <ClInclude Include="C:\Users\higginsonj\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\1.6.5-947-g39819f0\libraries\ESP8266WiFi\src\lwip\udp.h">
       <Filter>_libraries\ESP8266WiFi\src\lwip</Filter>
     </ClInclude>
+    <ClInclude Include="DMXSerial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\higginsonj\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\1.6.5-947-g39819f0\cores\esp8266\abi.cpp">
@@ -421,6 +427,9 @@
     </ClCompile>
     <ClCompile Include="C:\Users\higginsonj\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\1.6.5-947-g39819f0\libraries\ESP8266WiFi\src\WiFiUdp.cpp">
       <Filter>_libraries\ESP8266WiFi\src</Filter>
+    </ClCompile>
+    <ClCompile Include="DMXSerial.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

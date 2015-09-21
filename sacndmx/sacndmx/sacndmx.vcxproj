@@ -160,6 +160,7 @@
     <ClInclude Include="C:\Users\higginsonj\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\1.6.5-947-g39819f0\libraries\ESP8266WiFi\src\WiFiServer.h" />
     <ClInclude Include="C:\Users\higginsonj\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\1.6.5-947-g39819f0\libraries\ESP8266WiFi\src\WiFiUdp.h" />
     <ClInclude Include="C:\Users\higginsonj\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\1.6.5-947-g39819f0\variants\adafruit\pins_arduino.h" />
+    <ClInclude Include="DMXSerial.h" />
     <ClInclude Include="Visual Micro\.sacndmx.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +203,7 @@
     <ClCompile Include="C:\Users\higginsonj\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\1.6.5-947-g39819f0\libraries\ESP8266WiFi\src\WiFiClient.cpp" />
     <ClCompile Include="C:\Users\higginsonj\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\1.6.5-947-g39819f0\libraries\ESP8266WiFi\src\WiFiServer.cpp" />
     <ClCompile Include="C:\Users\higginsonj\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\1.6.5-947-g39819f0\libraries\ESP8266WiFi\src\WiFiUdp.cpp" />
+    <ClCompile Include="DMXSerial.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
